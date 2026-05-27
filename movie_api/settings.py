@@ -76,11 +76,19 @@ WSGI_APPLICATION = 'movie_api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'movie_api',
+        'TRUSTED_CONNECTION': 'yes',  # Windows-аутентификация
+        'HOST': 'ЕВГЕНИЯ',  # имя вашего сервера
+        'OPTIONS': {
+            'driver': 'ODBC Driver 18 for SQL Server',
+            'trust_server_certificate': True,
+            'encrypt': True,
+        },
     }
 }
 
+USE_TZ = False
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
