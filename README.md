@@ -32,6 +32,7 @@ python manage.py createsuperuser
 # Запустить сервер
 python manage.py runserver
 
+<<<<<<< HEAD
 
 python manage.py makemigrations
 python manage.py migrate
@@ -49,3 +50,7 @@ http://127.0.0.1:8000/api/v1/directors/     # Список режиссёров
 http://127.0.0.1:8000/api/v1/genres/        # Список жанров	
 http://127.0.0.1:8000/api/v1/actors/        # Список актёров	
 http://127.0.0.1:8000/api/v1/movies/?title=Начало    # Фильтр по названию	
+=======
+# Встроенная документация
+http://127.0.0.1:8000/api/v1/
+>>>>>>> c96cdd7681ae406c90746eec4a24ecec26ada1d4
